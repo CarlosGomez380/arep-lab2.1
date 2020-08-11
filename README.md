@@ -20,6 +20,8 @@ Open a command prompt on the folder that you are going to save this project and 
 git clone https://github.com/CarlosGomez380/arep-lab1.git
 ```
 
+![](https://github.com/CarlosGomez380/arep-lab1/blob/master/img/clone.PNG)
+
 Once finish this process, open the project on the terminal with 
 
 ```
@@ -32,6 +34,8 @@ And copy:
 mvn package
 ```
 
+![](https://github.com/CarlosGomez380/arep-lab1/blob/master/img/package.PNG)
+
 ## Running the tests
 
 To run test, open the folder of this project and a command prompt on this location and copy:
@@ -40,6 +44,10 @@ To run test, open the folder of this project and a command prompt on this locati
 mvn test
 ```
 
+![](https://github.com/CarlosGomez380/arep-lab1/blob/master/img/test.PNG)
+
+![](https://github.com/CarlosGomez380/arep-lab1/blob/master/img/runnigTest.PNG)
+
 ## Deployment
 
 To deploy this project open the folder of this project and a command prompt on this location and copy:
@@ -47,6 +55,8 @@ To deploy this project open the folder of this project and a command prompt on t
 ```
 mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.lab1.App"
 ```
+
+![](https://github.com/CarlosGomez380/arep-lab1/blob/master/img/deploy.PNG)
 
 ## Built With
 
