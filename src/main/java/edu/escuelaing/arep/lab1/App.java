@@ -6,18 +6,20 @@ import java.util.Scanner;
 
 /**
  * Class that reads from a txt file and calculates mean and standard deviation
+ *
  * @author Carlos Gomez
  */
 public class App {
     /**
      * Main methot that reads a txt file and calculates mean and standard deviation
+     *
      * @param args Args
      */
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         try {
             File myObj = new File("number.txt");
             Scanner myReader = new Scanner(myObj);
-            List lista= new List();
+            LinkedLista lista = new LinkedLista();
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 lista.addNode(Integer.parseInt(data));
@@ -34,45 +36,47 @@ public class App {
 
     /**
      * Calculate the mean of a set of numbers
+     *
      * @param list Linked list that contains the set of numbers
      * @return mean's value
      */
-    public static double mean(List list){
-        Node head= list.getHead();
-        Node node= head.getPriorN();
-        double sum=0;
-        int count= 0;
-        if(node == null){
+    public static double mean(LinkedLista list) {
+        Node head = list.getHead();
+        Node node = head.getPriorN();
+        double sum = 0;
+        int count = 0;
+        if (node == null) {
             return 0;
-        }else{
-            while(node!= null){
-                sum+= node.getNumber();
-                node= list.nextNode(node);
-                count+=1;
+        } else {
+            while (node != null) {
+                sum += node.getNumber();
+                node = list.nextNode(node);
+                count += 1;
             }
-            return sum/count;
+            return Math.round((sum / count)*100d)/100d;
         }
     }
 
     /**
      * Calculate the standard deviation of a set of numbers
+     *
      * @param list Linked list that contains the set of numbers
      * @return The standard deviation's value
      */
-    public static double deviation(List list){
-        Node node= list.getHead().getPriorN();
-        double sum=0;
-        int count= 0;
-        if(node == null){
+    public static double deviation(LinkedLista list) {
+        Node node = list.getHead().getPriorN();
+        double sum = 0;
+        int count = 0;
+        if (node == null) {
             return 0;
-        }else{
-            double mean= mean(list);
-            while(node!= null){
-                sum+= Math.pow((node.getNumber() - mean),2);
-                node= list.nextNode(node);
-                count+=1;
+        } else {
+            double mean = mean(list);
+            while (node != null) {
+                sum += Math.pow((node.getNumber() - mean), 2);
+                node = list.nextNode(node);
+                count += 1;
             }
-            return Math.sqrt((sum/(count-1)));
+            return Math.round(Math.sqrt((sum / (count - 1)))* 100d) / 100d;
         }
     }
 
