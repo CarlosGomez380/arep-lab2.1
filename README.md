@@ -58,6 +58,16 @@ mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.lab1.App"
 
 ![](https://github.com/CarlosGomez380/arep-lab1/blob/master/img/deploy.PNG)
 
+## Documentation JavaDoc
+
+To see the javadoc generated copy:
+
+```
+mvn javadoc:javadoc
+```
+
+This document will be located in /target/site
+
 ## Built With
 
 - [Maven](https://maven.apache.org/) - Dependency Management
