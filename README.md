@@ -1,4 +1,4 @@
-# AREP - LAB 1
+# AREP - LAB 2
 
 A program to calculate the mean and standard deviation of a set of n real numbers. The program reads the n real numbers from a file.
 
@@ -53,10 +53,19 @@ mvn test
 To deploy this project open the folder of this project and a command prompt on this location and copy:
 
 ```
-mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.lab1.App"
+java -cp target/classes;target/dependency/* edu.escuelaing.arep.lab1.SparkWebApp
 ```
 
-![](https://github.com/CarlosGomez380/arep-lab1/blob/master/img/deploy.PNG)
+![](https://github.com/CarlosGomez380/arep-lab2.1/blob/master/img/deploy2.PNG)
+
+Open your browser and type:
+
+```
+http://localhost:4567/inputdata
+```
+
+![](https://github.com/CarlosGomez380/arep-lab2.1/blob/master/img/deploy3.PNG)
+
 
 ## Documentation JavaDoc
 
@@ -67,6 +76,10 @@ mvn javadoc:javadoc
 ```
 
 This document will be located in /target/site
+
+## Heroku deployment
+
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://serene-reaches-79126.herokuapp.com/inputdata)
 
 ## Built With
 
