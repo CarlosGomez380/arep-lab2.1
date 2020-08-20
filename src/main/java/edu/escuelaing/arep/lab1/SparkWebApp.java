@@ -50,7 +50,7 @@ public class SparkWebApp {
         double meanNumber= App.mean(lista);
         double deviaionNumber= App.deviation(lista);
 
-        return "El valor de la media es: "+ meanNumber + " y el valor de la desviación estandar es: " + deviaionNumber;
+        return "El valor de la media es: "+ meanNumber + " y el valor de la desviacion estandar es: " + deviaionNumber;
     }
 
     /**
